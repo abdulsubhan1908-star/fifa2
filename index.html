@@ -1,0 +1,90 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FIFA Legends</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <nav>
+        <div class="logo">FIFA LEGENDS</div>
+
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="login.html">Login</a></li>
+            <li><a href="register.html">Register</a></li>
+        </ul>
+    </nav>
+</header>
+
+<div id="status-banner" class="banner" style="display: none;"></div>
+
+<section class="hero">
+    <h1>Welcome To FIFA Legends</h1>
+    <p>
+        Explore the greatest football players in FIFA history,
+        their achievements, goals, trophies, and records.
+    </p>
+</section>
+
+<section class="content">
+
+    <h2>Lionel Messi</h2>
+    <p>
+        Lionel Messi is regarded as one of the greatest footballers
+        of all time. He has won multiple Ballon d'Or awards and
+        led Argentina to World Cup glory.
+    </p>
+
+    <br><br>
+
+    <h2>Cristiano Ronaldo</h2>
+    <p>
+        Cristiano Ronaldo is one of football's all-time leading
+        scorers. Known for his speed, strength, and finishing,
+        he has won major trophies across several leagues.
+    </p>
+
+    <br><br>
+
+    <h2>Kylian Mbappé</h2>
+    <p>
+        Mbappé is one of the fastest and most talented football
+        players in the modern game. He has already achieved
+        tremendous success at a young age.
+    </p>
+
+    <br><br>
+
+    <h2>Erling Haaland</h2>
+    <p>
+        Haaland is known for his goal-scoring ability,
+        physical strength, and incredible finishing skills.
+    </p>
+
+</section>
+
+<footer>
+    <p>&copy; 2026 FIFA Legends | All Rights Reserved</p>
+</footer>
+
+<script>
+    const params = new URLSearchParams(window.location.search);
+    const status = params.get("status");
+    const banner = document.getElementById("status-banner");
+
+    if (status === "registered") {
+        banner.textContent = "Registration successful! Welcome to FIFA Legends.";
+        banner.style.display = "block";
+    } else if (status === "loggedin") {
+        banner.textContent = "Login successful! Welcome back.";
+        banner.style.display = "block";
+    }
+</script>
+
+</body>
+</html>
